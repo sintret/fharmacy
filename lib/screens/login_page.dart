@@ -243,14 +243,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
     var response = await http.post(
         url,
-        headers: <String, String>{
-          'Content-Type': 'application/json; charset=UTF-8',
-        },
-        body: jsonEncode(<String, String>{
-          'username': email,
-          'password' : pass
-        })
+        body: data
     );
+
+    print(response.body);
+
 
     if (response.statusCode == 200) {
       jsonResponse = json.decode(response.body);
