@@ -1,0 +1,232 @@
+name: fharmasi
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^10.1.0
+  http: ^0.13.4
+  shared_preferences: ^2.0.15
+  toast: ^0.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  fonts:
+    - family: tab1
+      fonts:
+        - asset: assets/icon/ic_tab1.ttf
+    - family: Sofia
+      fonts:
+        - asset: assets/font/Sofia/SofiaProBold.otf
+          weight: 900
+        - asset: assets/font/Sofia/SofiaProSemiBold.otf
+          weight: 800
+        - asset: assets/font/Sofia/SofiaProMedium.otf
+          weight: 700
+        - asset: assets/font/Sofia/SofiaProRegular.otf
+          weight: 600
+        - asset: assets/font/Sofia/SofiaProLight.otf
+          weight: 500
+        - asset: assets/font/Sofia/SofiaProExtraLight.otf
+          weight: 400
+        - asset: assets/font/Sofia/SofiaProUltraLight.otf
+          weight: 300
+
+    # To addlib/Screen/UI_Screen/Plane_Apps/Assets to your application, add anlib/Screen/UI_Screen/Plane_Apps/Assets section, like this:
+  assets:
+    - assets/illustration/error_illustration/error1.jpg
+    - assets/illustration/error_illustration/error2.jpg
+    - assets/illustration/error_illustration/error3.jpg
+    - assets/illustration/error_illustration/error3.jpg
+    - assets/illustration/error_illustration/error4.jpg
+    - assets/illustration/error_illustration/error5.jpg
+    - assets/illustration/error_illustration/error6.jpg
+    - assets/illustration/error_illustration/error7.jpg
+    - assets/illustration/error_illustration/error8.jpg
+    - assets/illustration/error_illustration/error9.jpg
+    - assets/illustration/error_illustration/error10.jpg
+    - assets/illustration/error_illustration/error11.jpg
+    - assets/illustration/error_illustration/error12.jpg
+    - assets/illustration/error_illustration/error13.jpg
+    - assets/illustration/error_illustration/error14.jpg
+    - assets/illustration/error_illustration/error15.jpg
+    - assets/illustration/error_illustration/error16.jpg
+    - assets/illustration/error_illustration/error17.jpg
+    - assets/illustration/error_illustration/error18.jpg
+    - assets/illustration/error_illustration/error19.jpg
+    - assets/illustration/error_illustration/error20.jpg
+    - assets/illustration/error_illustration/error21.jpg
+    - assets/illustration/error_illustration/error22.jpg
+    - assets/illustration/error_illustration/error23.jpg
+    - assets/illustration/error_illustration/error24.jpg
+    - assets/illustration/error_illustration/error25.jpg
+    - assets/illustration/error_illustration/error26.jpg
+    - assets/illustration/error_illustration/error27.jpg
+    - assets/illustration/error_illustration/error28.jpg
+    - assets/illustration/error_illustration/error29.jpg
+    - assets/illustration/error_illustration/error30.jpg
+    - assets/illustration/error_illustration/error31.jpg
+    - assets/illustration/error_illustration/error32.jpg
+    - assets/illustration/error_illustration/error33.jpg
+    - assets/illustration/error_illustration/error34.jpg
+    - assets/illustration/error_illustration/error35.jpg
+    - assets/illustration/error_illustration/error36.jpg
+    - assets/illustration/error_illustration/error37.jpg
+    - assets/illustration/error_illustration/error38.jpg
+    - assets/illustration/error_illustration/error39.jpg
+    - assets/illustration/error_illustration/error40.jpg
+    - assets/illustration/error_illustration/error40.jpg
+    - assets/illustration/SplashScreen_illustration/Splash1.jpg
+    - assets/illustration/SplashScreen_illustration/Splash2.jpg
+    - assets/illustration/SplashScreen_illustration/Splash3.jpg
+    - assets/illustration/SplashScreen_illustration/Splash4.jpg
+    - assets/illustration/SplashScreen_illustration/Splash5.jpg
+    - assets/illustration/SplashScreen_illustration/Splash6.jpg
+    - assets/illustration/SplashScreen_illustration/Splash7.jpg
+    - assets/images/boarding1.png
+    - assets/images/boarding2.png
+    - assets/images/boarding3.png
+    - assets/images/board1.png
+    - assets/images/board2.png
+    - assets/images/board3.png
+    - assets/images/onBoarding1.gif
+    - assets/images/onBoarding2.gif
+    - assets/images/onBoarding3.gif
+    - assets/images/onBoardingC1.png
+    - assets/images/onBoardingC2.png
+    - assets/images/onBoardingC3.png
+    - assets/images/SplashScreen.png
+    - assets/images/help.png
+    - assets/images/screenCard.png
+    - assets/images/materialIcon.png
+    - assets/images/card1.png
+    - assets/images/card2.png
+    - assets/images/card3.png
+    - assets/images/logo.png
+    - assets/images/SplashScreen.png
+    - assets/images/materialCard.png
+    - assets/images/materialIcon.png
+    - assets/images/screenCard.png
+    - assets/images/noInternet.png
+    - assets/images/screenIcon.png
+    - assets/images/help.png
+    - assets/images/bottomNavigate.png
+    - assets/images/bottomSheet.png
+    - assets/images/button.png
+    - assets/images/card.png
+    - assets/images/chips.png
+    - assets/images/dialog.png
+    - assets/images/expand.png
+    - assets/images/grid.png
+    - assets/images/list.png
+    - assets/images/menu.png
+    - assets/images/pickers.png
+    - assets/images/progress.png
+    - assets/images/onBoarding1.gif
+    - assets/images/onBoarding2.gif
+    - assets/images/onBoarding3.gif
+    - assets/images/slider.png
+    - assets/images/tabs.png
+    - assets/images/toast.png
+    - assets/images/toolbar.png
+    - assets/images/imageHeader.jpg
+    - assets/images/category3.jpg
+    - assets/images/category5.jpg
+    - assets/images/category6.jpg
+    - assets/images/category7.jpg
+    - assets/images/background10.png
+    - assets/images/backgroundLine.png
+    - assets/images/plate_food/1.png
+    - assets/images/plate_food/2.png
+    - assets/images/plate_food/3.png
+    - assets/images/plate_food/4.png
+    - assets/images/plate_food/5.png
+    - assets/images/plate_food/6.png
+    - assets/images/plate_food/7.png
+    - assets/images/plate_food/8.png
+    - assets/images/plate_food/9.png
+    - assets/images/plate_food/10.png
+    - assets/images/plate_food/11.png
+    - assets/images/plate_food/12.png
+    - assets/images/plate_food/13.png
+    - assets/images/plate_food/14.png
+    - assets/images/plate_food/15.png
+    - assets/images/plate_food/16.png
+    - assets/images/plate_food/17.png
+    - assets/images/plate_food/18.png
+    - assets/images/plate_food/19.png
+    - assets/images/plate_food/20.png
+    - assets/icon/amerika.png
+    - assets/icon/thailand.png
+    - assets/icon/england.png
+    - assets/icon/italia.png
+    - assets/icon/spanyol.png
+    - assets/icon/paris.png
+    - assets/images/deals_layout/buildingMenu.png
+    - assets/images/deals_layout/cardMenu.png
+    - assets/images/deals_layout/financeMenu.png
+    - assets/images/deals_layout/findMenu.png
+    - assets/images/deals_layout/giveMenu.png
+    - assets/images/deals_layout/growthMenu.png
+    - assets/images/deals_layout/locationMenu.png
+    - assets/images/deals_layout/moneyMenu.png
+    - assets/images/deals_layout/saveMenu.png
+    - assets/images/deals_layout/shareMenu.png
+    - assets/images/twitchLogo.png
+    - assets/images/solariaLogo.jpg
+    - assets/images/slackLogo.png
+    - assets/images/finance_layout/bils_finance.png
+    - assets/images/finance_layout/doctor_finance.png
+    - assets/images/finance_layout/hangout_finance.png
+    - assets/images/finance_layout/lifeStyle_finance.png
+    - assets/images/finance_layout/workout_finance.png
+    - assets/images/icon.png
