@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: InkWell(
                       onTap: () {
                         //TODO
-                        showToast("Show Center Toast", gravity: Toast.center);
+                        showToast("Ok sabar dulu", gravity: Toast.center);
                       },
                       child: Text(
                         'Forgot Password ?',
@@ -82,6 +82,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: RaisedButton(
                         onPressed: () {
                           //TODO
+                          signIn(emailController.text,passwordController.text);
+/*
                           emailController.text == "" ||
                                   passwordController.text == ""
                               ? null
@@ -89,9 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   setState(() {
                                     _isLoading = true;
                                   });
-                                  signIn(emailController.text,
-                                      passwordController.text);
-                                };
+                                };*/
                         },
                         child: Text(
                           'Login',
@@ -232,14 +232,38 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   signIn(String email, pass) async {
+/*
+      showToast("Login", gravity: Toast.center);
+*/
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     Map data = {'email': email, 'password': pass};
     var jsonResponse = null;
-    var url = Uri.parse('https://backend.fharmacy.com/api/customer-login');
-    var response = await http.post(url, body: data);
+    var url = Uri.parse('https://backend.fharmasi.com/api/customer-login');
+    //var url = Uri.parse('http://localhost:3000/api/customer-login');
+
+    var response = await http.post(
+        url,
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(<String, String>{
+          'username': email,
+          'password' : pass
+        })
+    );
+
     if (response.statusCode == 200) {
       jsonResponse = json.decode(response.body);
-      if (jsonResponse != null) {
+      if(jsonResponse['token']) {
+        sharedPreferences.setString("token", jsonResponse['token']);
+        Navigator.of(context).pushAndRemoveUntil(
+            MaterialPageRoute(builder: (BuildContext context) => MainPage()),
+                (Route<dynamic> route) => false);
+      } else {
+        showToast("Username or password wrong", gravity: Toast.center);
+      }
+
+      /*   if (jsonResponse != null) {
         setState(() {
           _isLoading = false;
         });
@@ -247,7 +271,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (BuildContext context) => MainPage()),
             (Route<dynamic> route) => false);
-      }
+      }*/
     } else {
       setState(() {
         _isLoading = false;

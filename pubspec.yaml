@@ -61,9 +61,6 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   fonts:
-    - family: tab1
-      fonts:
-        - asset: assets/icon/ic_tab1.ttf
     - family: Sofia
       fonts:
         - asset: assets/font/Sofia/SofiaProBold.otf
@@ -83,55 +80,6 @@ flutter:
 
     # To addlib/Screen/UI_Screen/Plane_Apps/Assets to your application, add anlib/Screen/UI_Screen/Plane_Apps/Assets section, like this:
   assets:
-    - assets/illustration/error_illustration/error1.jpg
-    - assets/illustration/error_illustration/error2.jpg
-    - assets/illustration/error_illustration/error3.jpg
-    - assets/illustration/error_illustration/error3.jpg
-    - assets/illustration/error_illustration/error4.jpg
-    - assets/illustration/error_illustration/error5.jpg
-    - assets/illustration/error_illustration/error6.jpg
-    - assets/illustration/error_illustration/error7.jpg
-    - assets/illustration/error_illustration/error8.jpg
-    - assets/illustration/error_illustration/error9.jpg
-    - assets/illustration/error_illustration/error10.jpg
-    - assets/illustration/error_illustration/error11.jpg
-    - assets/illustration/error_illustration/error12.jpg
-    - assets/illustration/error_illustration/error13.jpg
-    - assets/illustration/error_illustration/error14.jpg
-    - assets/illustration/error_illustration/error15.jpg
-    - assets/illustration/error_illustration/error16.jpg
-    - assets/illustration/error_illustration/error17.jpg
-    - assets/illustration/error_illustration/error18.jpg
-    - assets/illustration/error_illustration/error19.jpg
-    - assets/illustration/error_illustration/error20.jpg
-    - assets/illustration/error_illustration/error21.jpg
-    - assets/illustration/error_illustration/error22.jpg
-    - assets/illustration/error_illustration/error23.jpg
-    - assets/illustration/error_illustration/error24.jpg
-    - assets/illustration/error_illustration/error25.jpg
-    - assets/illustration/error_illustration/error26.jpg
-    - assets/illustration/error_illustration/error27.jpg
-    - assets/illustration/error_illustration/error28.jpg
-    - assets/illustration/error_illustration/error29.jpg
-    - assets/illustration/error_illustration/error30.jpg
-    - assets/illustration/error_illustration/error31.jpg
-    - assets/illustration/error_illustration/error32.jpg
-    - assets/illustration/error_illustration/error33.jpg
-    - assets/illustration/error_illustration/error34.jpg
-    - assets/illustration/error_illustration/error35.jpg
-    - assets/illustration/error_illustration/error36.jpg
-    - assets/illustration/error_illustration/error37.jpg
-    - assets/illustration/error_illustration/error38.jpg
-    - assets/illustration/error_illustration/error39.jpg
-    - assets/illustration/error_illustration/error40.jpg
-    - assets/illustration/error_illustration/error40.jpg
-    - assets/illustration/SplashScreen_illustration/Splash1.jpg
-    - assets/illustration/SplashScreen_illustration/Splash2.jpg
-    - assets/illustration/SplashScreen_illustration/Splash3.jpg
-    - assets/illustration/SplashScreen_illustration/Splash4.jpg
-    - assets/illustration/SplashScreen_illustration/Splash5.jpg
-    - assets/illustration/SplashScreen_illustration/Splash6.jpg
-    - assets/illustration/SplashScreen_illustration/Splash7.jpg
     - assets/images/boarding1.png
     - assets/images/boarding2.png
     - assets/images/boarding3.png
@@ -205,12 +153,6 @@ flutter:
     - assets/images/plate_food/18.png
     - assets/images/plate_food/19.png
     - assets/images/plate_food/20.png
-    - assets/icon/amerika.png
-    - assets/icon/thailand.png
-    - assets/icon/england.png
-    - assets/icon/italia.png
-    - assets/icon/spanyol.png
-    - assets/icon/paris.png
     - assets/images/deals_layout/buildingMenu.png
     - assets/images/deals_layout/cardMenu.png
     - assets/images/deals_layout/financeMenu.png
