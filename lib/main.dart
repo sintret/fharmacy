@@ -35,6 +35,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   late  SharedPreferences sharedPreferences;
+  String name = "";
 
   @override
   void initState() {
@@ -44,6 +45,8 @@ class _MainPageState extends State<MainPage> {
 
   checkLoginStatus() async {
     sharedPreferences = await SharedPreferences.getInstance();
+    name = sharedPreferences.get("name").toString();
+
     if(sharedPreferences.getString("token") == null) {
       Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (BuildContext context) => LoginScreen()), (Route<dynamic> route) => false);
     }
@@ -51,9 +54,10 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    //name = sharedPreferences.get("name").toString();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Code Land", style: TextStyle(color: Colors.white)),
+        title: Text("Fharmasi", style: TextStyle(color: Colors.white)),
         actions: <Widget>[
           FlatButton(
             onPressed: () {
@@ -65,7 +69,7 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
       ),
-      body: Center(child: Text("Main Page")),
+      body: Center(child: Text(name)),
       drawer: Drawer(),
     );
   }

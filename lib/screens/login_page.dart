@@ -232,33 +232,42 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   signIn(String email, pass) async {
-/*
-      showToast("Login", gravity: Toast.center);
-*/
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     Map data = {'email': email, 'password': pass};
     var jsonResponse = null;
     var url = Uri.parse('https://backend.fharmasi.com/api/customer-login');
     //var url = Uri.parse('http://localhost:3000/api/customer-login');
 
-    var response = await http.post(
+    final response = await http.post(
         url,
         body: data
     );
 
+    print(response);
     print(response.body);
-
-
+    print(response.statusCode);
     if (response.statusCode == 200) {
       jsonResponse = json.decode(response.body);
-      if(jsonResponse['token']) {
-        sharedPreferences.setString("token", jsonResponse['token']);
+      print(jsonResponse['token']);
+      if(jsonResponse['token']!=""){
+        await sharedPreferences.setString("token", jsonResponse['token']);
+        await sharedPreferences.setString("name", jsonResponse['name']);
+
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (BuildContext context) => MainPage()),
                 (Route<dynamic> route) => false);
       } else {
         showToast("Username or password wrong", gravity: Toast.center);
       }
+
+      /*if(jsonResponse['token']) {
+        sharedPreferences.setString("token", jsonResponse['token']);
+        Navigator.of(context).pushAndRemoveUntil(
+            MaterialPageRoute(builder: (BuildContext context) => MainPage()),
+                (Route<dynamic> route) => false);
+      } else {
+        showToast("Username or password wrong", gravity: Toast.center);
+      }*/
 
       /*   if (jsonResponse != null) {
         setState(() {
