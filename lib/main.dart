@@ -45,11 +45,11 @@ class _MainPageState extends State<MainPage> {
 
   checkLoginStatus() async {
     sharedPreferences = await SharedPreferences.getInstance();
-    name = sharedPreferences.get("name").toString();
-
+    name = sharedPreferences.get("name").toString() ?? "Fharmasi";
     if(sharedPreferences.getString("token") == null) {
       Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (BuildContext context) => LoginScreen()), (Route<dynamic> route) => false);
     }
+    setState(() {});
   }
 
   @override

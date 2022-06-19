@@ -259,25 +259,6 @@ class _LoginScreenState extends State<LoginScreen> {
       } else {
         showToast("Username or password wrong", gravity: Toast.center);
       }
-
-      /*if(jsonResponse['token']) {
-        sharedPreferences.setString("token", jsonResponse['token']);
-        Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (BuildContext context) => MainPage()),
-                (Route<dynamic> route) => false);
-      } else {
-        showToast("Username or password wrong", gravity: Toast.center);
-      }*/
-
-      /*   if (jsonResponse != null) {
-        setState(() {
-          _isLoading = false;
-        });
-        sharedPreferences.setString("token", jsonResponse['token']);
-        Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (BuildContext context) => MainPage()),
-            (Route<dynamic> route) => false);
-      }*/
     } else {
       setState(() {
         _isLoading = false;
@@ -290,6 +271,7 @@ class _LoginScreenState extends State<LoginScreen> {
   void showToast(String msg, {int? duration, int? gravity}) {
     Toast.show(msg, duration: duration, gravity: gravity);
   }
+
 }
 
 var raisedDecoration = BoxDecoration(
